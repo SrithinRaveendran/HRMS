@@ -54,9 +54,6 @@ async function register(req, res) {
 }
 
 // POST /api/auth/login
-// body: { email, password }
-// note: this login assumes email is unique within organisation. To support multi-org same email,
-// require org identifier (e.g. orgName or orgId). For simplicity, we just find by email.
 async function login(req, res) {
   const { email, password } = req.body;
   if (!email || !password) return res.status(400).json({ error: 'email and password required' });

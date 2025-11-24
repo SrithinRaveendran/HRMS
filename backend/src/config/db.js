@@ -13,7 +13,7 @@ const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
-  multipleStatements: true // useful for migrations; be careful with SQL injection
+  multipleStatements: true 
 });
 
 module.exports = {
